@@ -37,8 +37,10 @@ class App extends Component {
         
         var tmpTrago = _component.state.tragos.slice();
         
+        var urlService = 'https://tragolegal.herokuapp.com/v1/tragolegal/';
+        // var urlService = 'http://localhost:8081/v1/tragolegal/';
         
-        fetch('http://localhost:8081/v1/tragolegal/' + codigo)  
+        fetch(urlService + codigo)  
         .then(  
             function(response) {  
                 if (response.status !== 200) {  
